@@ -2,12 +2,15 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 
 	"github.com/HYGON-AI/hcu-dcgm/v3/pkg/dcgm"
 )
 
 func main() {
+	flag.Parse()
+
 	if err := dcgm.Init(); err != nil {
 		panic(err)
 	}
